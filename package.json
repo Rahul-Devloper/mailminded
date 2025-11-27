@@ -1,0 +1,17 @@
+{
+  "name": "mailminded",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "echo \"Use: npm run dev:api or dev:web\"",
+    "dev:api": "npm --workspace api run dev",
+    "dev:web": "npm --workspace web run dev",
+    "lint": "echo \"lint coming soon\"",
+    "format": "echo \"format coming soon\""
+  },
+   "engines": { "node": ">=18" }
+}
