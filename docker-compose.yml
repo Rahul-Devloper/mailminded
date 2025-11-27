@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./apps/api
+    container_name: mailminded-api
+    env_file:
+      - .env
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    volumes:
+      - ./apps/api:/usr/src/app
+    command: npm run dev
+
+  db:
+    image: postgres:16
+    container_name: mailminded-db
+    environment:
+      POSTGRES_USER: mailminded
+      POSTGRES_PASSWORD: mailminded
+      POSTGRES_DB: mailminded
+    ports:
+      - "5432:5432"
+    volumes:
+      - mailminded-db-data:/var/lib/postgresql/data
+
+volumes:
+  mailminded-db-data:

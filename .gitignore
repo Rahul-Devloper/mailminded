@@ -1,0 +1,75 @@
+# Node & package managers
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.pnp.*
+.pnp.js
+.pnp.cjs
+
+# Root and workspace caches/build output
+/dist
+/build
+/out
+**/dist
+**/build
+**/out
+**/.cache
+.cache/
+.tmp/
+*.tsbuildinfo
+
+# Framework & tool caches
+.next/
+.nuxt/
+.vite/
+.eslintcache
+.parcel-cache/
+.storybook/build/
+.serverless/
+
+# Coverage & test artifacts
+coverage/
+coverage-*/ 
+.nyc_output/
+jest.config.*.cache
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs & runtime files
+logs/
+*.log
+*.log.*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS / editor / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Docker local overrides / build artifacts
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# Misc
+*.local
+*.bak
+*.tmp
+*.swp
+
+# Keep lockfiles in source control (do NOT ignore):
+# package-lock.json, pnpm-lock.yaml, yarn.lock
