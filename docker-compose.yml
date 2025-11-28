@@ -11,7 +11,8 @@ services:
     depends_on:
       - db
     volumes:
-      - ./apps/api:/usr/src/app
+        - ./apps/api:/usr/src/app         # your source code
+        - /usr/src/app/node_modules       # keep container node_modules
     command: npm run dev
 
   db:
