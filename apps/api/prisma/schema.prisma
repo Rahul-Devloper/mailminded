@@ -12,3 +12,29 @@ model Test {
   message   String
   createdAt DateTime @default(now())
 }
+
+model Email {
+  id          Int        @id @default(autoincrement())
+  subject     String?
+  fromEmail   String?
+  company     String?
+  role        String?
+  body        String
+  isRejection Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  followUps   FollowUp[]
+}
+
+model FollowUp {
+  id        Int             @id @default(autoincrement())
+  email     Email           @relation(fields: [emailId], references: [id])
+  emailId   Int
+  draftBody String
+  status    FollowUpStatus  @default(DRAFT)
+  createdAt DateTime        @default(now())
+}
+
+enum FollowUpStatus {
+  DRAFT
+  SENT
+}
