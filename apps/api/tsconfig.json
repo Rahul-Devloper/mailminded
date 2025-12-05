@@ -8,8 +8,21 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "outDir": "dist"
+
+    // Source lives in src/, build output in dist/
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // Nice DX: allow "@/..." imports from src root
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
-  "include": ["**/*.ts"],
+
+  // Only compile files inside src/
+  "include": ["src"],
+
+  // Never touch these
   "exclude": ["node_modules", "dist"]
 }
