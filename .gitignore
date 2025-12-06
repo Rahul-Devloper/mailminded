@@ -71,5 +71,8 @@ docker-compose.*.override.yml
 *.tmp
 *.swp
 
+# Generated Prisma client (do NOT ignore if you want to use Prisma):
+/apps/api/src/generated/
+
 # Keep lockfiles in source control (do NOT ignore):
 # package-lock.json, pnpm-lock.yaml, yarn.lock
